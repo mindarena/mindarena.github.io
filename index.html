@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Price of Trust - Strategic Multiplayer Game</title>
+    <title>Mind Arena - Mobile Apps</title>
     <style>
         * {
             margin: 0;
@@ -15,52 +15,71 @@
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: #333;
             min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
+            padding: 40px 20px;
         }
-        .container {
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+        }
+        .header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        .apps-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 30px;
+        }
+        .app-card {
             background: white;
             border-radius: 20px;
-            padding: 60px 40px;
-            max-width: 600px;
+            padding: 40px;
             box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-            text-align: center;
+            transition: transform 0.3s ease;
         }
-        h1 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
+        .app-card:hover {
+            transform: translateY(-5px);
+        }
+        .app-card h2 {
+            font-size: 2em;
+            margin-bottom: 15px;
             color: #667eea;
         }
-        p {
-            font-size: 1.2em;
+        .app-card p {
+            font-size: 1.1em;
             line-height: 1.6;
             color: #666;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
         }
         .badge {
-            display: inline-block;
             margin: 20px 0;
         }
         .badge img {
             height: 60px;
         }
         .features {
-            text-align: left;
-            margin: 30px 0;
+            margin: 25px 0;
         }
-        .features h2 {
+        .features h3 {
             color: #764ba2;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
+            font-size: 1.2em;
         }
         .features ul {
             list-style: none;
         }
         .features li {
-            padding: 10px 0;
-            padding-left: 30px;
+            padding: 8px 0;
+            padding-left: 25px;
             position: relative;
+            color: #555;
         }
         .features li:before {
             content: "✓";
@@ -68,42 +87,94 @@
             left: 0;
             color: #667eea;
             font-weight: bold;
-            font-size: 1.2em;
+            font-size: 1.1em;
         }
-        footer {
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
-            color: #999;
-            font-size: 0.9em;
+        .footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 2px solid rgba(255,255,255,0.3);
+            color: white;
+        }
+        .footer p {
+            margin: 10px 0;
+        }
+        .footer a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 768px) {
+            .apps-container {
+                grid-template-columns: 1fr;
+            }
+            .header h1 {
+                font-size: 2em;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Price of Trust</h1>
-        <p>A strategic multiplayer game where trust and deception collide. Make choices, form alliances, and discover the true price of trust.</p>
-        
-        <div class="badge">
-            <a href="https://play.google.com/store/apps/details?id=com.mindarena.priceoftrust" target="_blank">
-                <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play">
-            </a>
+    <div class="header">
+        <h1>Mind Arena</h1>
+        <p>Strategic Mobile Games & Social Apps</p>
+    </div>
+
+    <div class="apps-container">
+        <!-- Price of Trust Card -->
+        <div class="app-card">
+            <h2>Price of Trust</h2>
+            <p>A strategic multiplayer game where trust and deception collide. Make choices, form alliances, and discover the true price of trust.</p>
+            
+            <div class="badge">
+                <a href="https://play.google.com/store/apps/details?id=com.mindarena.priceoftrust" target="_blank">
+                    <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play">
+                </a>
+            </div>
+
+            <div class="features">
+                <h3>Features</h3>
+                <ul>
+                    <li>10-player multiplayer matches</li>
+                    <li>Strategic money transfers and voting</li>
+                    <li>Global leaderboards with Thought Power (TP)</li>
+                    <li>Real-time chat and alliances</li>
+                    <li>Multi-language support</li>
+                </ul>
+            </div>
         </div>
 
-        <div class="features">
-            <h2>Features</h2>
-            <ul>
-                <li>Real-time multiplayer gameplay</li>
-                <li>Strategic decision making</li>
-                <li>Global leaderboards</li>
-                <li>Engaging game mechanics</li>
-            </ul>
-        </div>
+        <!-- Recipro Card -->
+        <div class="app-card">
+            <h2>Recipro</h2>
+            <p>A peer-to-peer help and mentorship platform. Connect with others based on shared interests, exchange knowledge, and build meaningful connections through reciprocity.</p>
+            
+            <div class="badge">
+                <a href="https://play.google.com/store/apps/details?id=com.mindarena.recipro" target="_blank">
+                    <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play">
+                </a>
+            </div>
 
-        <footer>
-            <p>&copy; 2025 Mind Arena. All rights reserved.</p>
-            <p>Contact: <a href="mailto:infomindarena@gmail.com" style="color: #667eea;">infomindarena@gmail.com</a></p>
-        </footer>
+            <div class="features">
+                <h3>Features</h3>
+                <ul>
+                    <li>Tag-based matching system</li>
+                    <li>One-on-one messaging</li>
+                    <li>Points and keys reward system</li>
+                    <li>Rating and feedback system</li>
+                    <li>10 language support</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2026 Mind Arena. All rights reserved.</p>
+        <p>Contact: <a href="mailto:infomindarena@gmail.com">infomindarena@gmail.com</a></p>
+        <p>Location: New Delhi, India</p>
     </div>
 </body>
 </html>
